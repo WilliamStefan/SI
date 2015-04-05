@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+
+link(href="../assets/bootstrap/css/bootstrap" rel="stylesheet")
+link(href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet")
+link(href="../assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet")
+link(href="../assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet")
+link(href="../assets/home.css" rel="stylesheet")
+script(type="text/javascript", src"../assets/ajax.js")
+<script type="text/javascript" src="../assets/js/ajax.js"></script>
+
+head
+	title Ganesha Mocktail
+	
+body
+	#header
+		p#white.text-center.bg-danger(style="font-size:20px")
+			strong
+				| Ganesha Mocktail
+				br
+				| Jalan Gelap Nyawang 3, Bandung
+				br
+				| RT 02 RW 04 Kelurahan Lebak Siliwangi Kecamatan Coblong
+				br
+	
+	#menubutton
+		#menu.pull-left
+			button(type="button", onclick="return").btn.btn-success
+				| Laporan keuangan
+			button(type="button").btn.btn-warning
+				| Laporan per menu
+		#menu2.pull-right
+			button(type="button").btn.btn-primary
+				| Memasukkan data penjualan
+			button(type="button").btn.btn-info
+				| Memasukkan data pengeluaran
+			button(type="button").btn.btn-danger
+				| Logout
+				
+	#content
+		
+	

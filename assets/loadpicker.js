@@ -1,0 +1,1 @@
+$(function(){$("#inputtanggal").datepicker({});});
