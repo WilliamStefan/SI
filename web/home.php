@@ -3,10 +3,10 @@
 
 <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link href="../assets/home.css" rel="stylesheet">
-<link href="../assets/bootstrap-datepicker.css" rel="stylesheet">
-<script type="text/javascript" src="../assets/ajax.js"></script>
-<script type="text/javascript" src="../assets/bootstrap-datepicker.js"></script>
+<link href="../assets/css/home.css" rel="stylesheet">
+<link href="../assets/css/bootstrap-datepicker.css" rel="stylesheet">
+<script type="text/javascript" src="../assets/js/ajax.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap-datepicker.js"></script>
 <head>
 	<title>Ganesha Mocktail</title>
 </head>
@@ -36,12 +36,5 @@
 	</div>
 	<div id="content">
 
-	</div>
-	<script>
-		function LoadMasukan()
-		{
-			
-		}
-	</script>
-	
+	</div>	
 </body>

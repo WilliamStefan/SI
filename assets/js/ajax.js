@@ -74,7 +74,7 @@ function masukkanpenjualan() {
 			document.getElementById("content").innerHTML=xmlHttpObj.responseText;
 			var s = document.createElement("script");
 			s.type = "text/javascript"; 
-			s.src = "../assets/loadpicker.js";
+			s.src = "../assets/js/loadpicker.js";
 			$("head").append(s);
 		}
 	}
@@ -104,7 +104,7 @@ function masukkanpengeluaran() {
 			document.getElementById("content").innerHTML=xmlHttpObj.responseText;
 			var s = document.createElement("script");
 			s.type = "text/javascript"; 
-			s.src = "../assets/loadpicker.js";
+			s.src = "../assets/js/loadpicker2.js";
 			$("head").append(s);
 		}
 	}
