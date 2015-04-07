@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 
-<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- CSS -->
+<link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../assets/bootstrap/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="../assets/bootstrap/css/bootstrap-select.css" rel="stylesheet">
 <link href="../assets/css/home.css" rel="stylesheet">
-<link href="../assets/css/bootstrap-datepicker.css" rel="stylesheet">
+
+<!-- Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="../assets/js/ajax.js"></script>
-<script type="text/javascript" src="../assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../assets/bootstrap/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../assets/bootstrap/js/bootstrap-select.js"></script>
+
 <head>
 	<title>Ganesha Mocktail</title>
 </head>
-<body onload="loadlaporankeuangan();">
+<body onload="return loadlaporankeuangan();">
 	<div id="header">
 		<p id="white" style="font-size:20px" class="text-center bg-danger">
 			<strong>
@@ -29,12 +36,12 @@
 			<button type="button" class="btn btn-warning" onclick="return loadlaporanmenu();">Laporan per menu</button>
 		</div>
 		<div id="menu2" class="pull-right">
-			<button type="button" class="btn btn-primary" onclick="return masukkanpenjualan();">Memasukkan data penjualan</button>
-			<button type="button" class="btn btn-info" onclick="return masukkanpengeluaran();">Memasukkan data pengeluaran</button>
+			<button type="button" class="btn btn-default" onclick="return masukkanmenu();">+ Menu</button>
+			<button type="button" class="btn btn-primary" onclick="return masukkanpenjualan();">+ Data penjualan</button>
+			<button type="button" class="btn btn-info" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
 			<button type="button" class="btn btn-danger">Logout</button>
 		</div>
 	</div>
 	<div id="content">
-
 	</div>	
 </body>

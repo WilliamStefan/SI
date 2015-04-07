@@ -50,6 +50,32 @@ function loadlaporanmenu() {
 	}
 }
 
+function masukkanmenu() {
+	// Create an XMLHttpRequest Object	
+	var xmlHttpObj;	
+	if (window.XMLHttpRequest) {				
+		xmlHttpObj = new XMLHttpRequest( );
+	} else {			
+		try {
+			xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {
+				xmlHttpObj = false;
+			}
+		}
+	}		
+	// Create a function that will receive data sent from the server
+	xmlHttpObj.open("GET", "masukkanmenu.php?", true);
+	xmlHttpObj.send();
+	xmlHttpObj.onreadystatechange = function() {
+		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+			document.getElementById("content").innerHTML=xmlHttpObj.responseText;
+		}
+	}
+}
+
 function masukkanpenjualan() {
 	// Create an XMLHttpRequest Object	
 	var xmlHttpObj;	

@@ -22,21 +22,15 @@ include 'sql_connect.php';
 	echo'
 	<form class="form-horizontal">
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Tanggal</label>
+			<label class="col-sm-2 control-label">Nama Menu</label>
 			<div class="col-sm-3">
-				<input type="text" type="text" class="form-control" id="inputtanggal2">
+				<input type="text" id="inputnamamenu" class="form-control">
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Jumlah</label>
+			<label class="col-sm-2 control-label">Harga</label>
 			<div class="col-sm-3">
-				<input type="number" class="form-control" id="inputpengeluaran" placeholder="Masukkan jumlah pengeluaran" min="1">
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-2 control-label">Keterangan</label>
-			<div class="col-sm-3">
-				<input type="text" class="form-control" id="deskripsipengeluaran" placeholder="Deskripsi pengeluaran" min="1">
+				<input type="number" class="form-control" id="inputharga" placeholder="Masukkan harga menu" min="1">
 			</div>
 		</div>
 		<div class="form-group">

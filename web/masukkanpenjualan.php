@@ -23,19 +23,18 @@ include 'sql_connect.php';
 	<form class="form-horizontal">
 		<div class="form-group">
 			<label class="col-sm-2 control-label">Tanggal</label>
-			<div class="col-sm-10">
+			<div class="col-sm-3">
 				<input type="text" type="text" class="form-control" id="inputtanggal">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-sm-2 control-label">Menu</label>
-			<div class="col-sm-10">
-				<select>
-					<option value="volvo">Ayam goreng</option>
-					<option value="saab">Ayam bakar</option>
-					<option value="mercedes">Ayam madu</option>
-					<option value="audi">Ayam cola</option>
-				</select> 
+			<div class="col-sm-3">
+				<select class="selectpicker form-control" id="selectmenu">
+					<option>Mustard</option>
+					<option>Ketchup</option>
+					<option>Relish</option>
+				</select>
 			</div>
 		</div>
 		<div class="form-group">
