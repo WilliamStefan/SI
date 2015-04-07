@@ -22,7 +22,7 @@ include 'sql_connect.php';
 	echo'
 	<form class="form-horizontal">
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Nama Menu</label>
+			<label class="col-sm-2 control-label">Nama menu</label>
 			<div class="col-sm-3">
 				<input type="text" id="inputnamamenu" class="form-control">
 			</div>

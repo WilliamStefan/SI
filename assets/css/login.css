@@ -1,11 +1,11 @@
 body {
-  background-image: url("../img/background.JPG");
+  background-image: url("../../img/background.JPG");
   background-repeat: no-repeat;
   background-size: 1366px 768px;
 }
 #white {
   color: #fff;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px #00000;
 }
 #content {
   margin-left: auto;

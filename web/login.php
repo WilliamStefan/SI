@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"></html>
-<link href="../assets/bootstrap/css/bootstrap" rel="stylesheet">
-<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
-<link href="../assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="../assets/login.css" rel="stylesheet">
+<!-- CSS -->
+<link href="../assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../assets/css/login.css" rel="stylesheet">
+
+<!-- Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../assets/js/ajax.js"></script>
+
 <head>
   <title>Ganesha Mocktail</title>
 </head>
