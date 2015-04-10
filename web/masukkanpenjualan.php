@@ -20,15 +20,18 @@ include 'sql_connect.php';
 // }
 // else {
 	echo'
+	<h1 class ="text-center">Masukkan Data Penjualan</h1>
+	<br><br>
+	
 	<form class="form-horizontal">
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Tanggal</label>
+			<label class="col-sm-5 control-label">Tanggal</label>
 			<div class="col-sm-3">
 				<input type="text" type="text" class="form-control" id="inputtanggal">
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Menu</label>
+			<label class="col-sm-5 control-label">Menu</label>
 			<div class="col-sm-3">
 				<select class="selectpicker form-control" id="selectmenu">
 					<option>Mustard</option>
@@ -38,19 +41,19 @@ include 'sql_connect.php';
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Jumlah</label>
+			<label class="col-sm-5 control-label">Jumlah</label>
 			<div class="col-sm-3">
 				<input type="number" class="form-control" id="inputjumlah" placeholder="Masukkan jumlah menu yang terjual di sini" min="1">
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Keterangan</label>
+			<label class="col-sm-5 control-label">Keterangan</label>
 			<div class="col-sm-3">
 				<input type="text" class="form-control" id="deskripsipenjualan" placeholder="Deskripsi pemasukkan" min="1">
 			</div>
 		</div>
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-offset-5 col-sm-7">
 				<button type="submit" class="btn btn-default">Masukkan</button>
 			</div>
 		</div>

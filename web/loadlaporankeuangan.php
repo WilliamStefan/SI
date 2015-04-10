@@ -20,6 +20,8 @@ include 'sql_connect.php';
 // }
 // else {
 	echo'
+		<h1 class ="text-center">Laporan Keuangan</h1>
+		<br><br>
 		<table class="table table-striped table-hover">
 			<tr>
 				<strong>

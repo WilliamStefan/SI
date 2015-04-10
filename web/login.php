@@ -14,14 +14,14 @@
 </head>
 <body>
   <div id="header">
-    <p id="white" style="font-size:20px" class="text-center bg-danger"><strong>Ganesha Mocktail<br>Jalan Gelap Nyawang 3, Bandung<br>RT 02 RW 04 Kelurahan Lebak Siliwangi Kecamatan Coblong<br></strong></p>
+    <p id="white" style="font-size:40px" class="text-center"><strong>Ganesha Mocktail</strong></p>
   </div>
   <div id="content">
     <form class="form-horizontal">
       <div class="form-group">
         <div class="col-xs-4"></div>
         <div class="col-xs-2 control-label">
-          <p id="white"><strong>Username</strong></p>
+          <p><strong>Username</strong></p>
         </div>
         <div class="col-xs-2">
           <input type="text" placeholder="Username" id="username" class="form-control">
@@ -30,7 +30,7 @@
       <div class="form-group">
         <div class="col-xs-4"></div>
         <div class="col-xs-2 control-label">
-          <p id="white"><strong>Password</strong></p>
+          <p><strong>Password</strong></p>
         </div>
         <div class="col-xs-2">
           <input type="password" placeholder="Password" id="password" class="form-control">

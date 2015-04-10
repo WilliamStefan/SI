@@ -20,6 +20,9 @@ include 'sql_connect.php';
 // }
 // else {
 	echo'
+	<h1 class ="text-center">Laporan per Menu</h1>
+	<br><br>
+	
 		<table class="table table-striped table-hover">
 			<tr>
 				<strong>

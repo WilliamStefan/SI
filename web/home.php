@@ -19,26 +19,21 @@
 </head>
 <body onload="return loadlaporankeuangan();">
 	<div id="header">
-		<p id="white" style="font-size:20px" class="text-center bg-danger">
+		<p id="white" style="font-size:40px" class="text-center">
 			<strong>
 				Ganesha Mocktail
-				<br>
-				Jalan Gelap Nyawang 3, Bandung
-				<br>
-				RT 02 RW 04 Kelurahan Lebak Siliwangi Kecamatan Coblong
-				<br>
 			</strong>
 		</p>
 	</div>
 	<div id="menubutton">
 		<div id="menu" class="pull-left">
-			<button type="button" class="btn btn-success" onclick="return loadlaporankeuangan();">Laporan keuangan</button>
-			<button type="button" class="btn btn-warning" onclick="return loadlaporanmenu();">Laporan per menu</button>
+			<button type="button" class="btn btn-default" onclick="return loadlaporankeuangan();">Laporan keuangan</button>
+			<button type="button" class="btn btn-default" onclick="return loadlaporanmenu();">Laporan per menu</button>
 		</div>
 		<div id="menu2" class="pull-right">
 			<button type="button" class="btn btn-default" onclick="return masukkanmenu();">+ Menu</button>
-			<button type="button" class="btn btn-primary" onclick="return masukkanpenjualan();">+ Data penjualan</button>
-			<button type="button" class="btn btn-info" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
+			<button type="button" class="btn btn-default" onclick="return masukkanpenjualan();">+ Data penjualan</button>
+			<button type="button" class="btn btn-default" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
 			<button type="button" class="btn btn-danger">Logout</button>
 		</div>
 	</div>

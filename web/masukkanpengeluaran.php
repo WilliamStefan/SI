@@ -20,27 +20,30 @@ include 'sql_connect.php';
 // }
 // else {
 	echo'
+	<h1 class ="text-center">Masukkan Data Pengeluaran</h1>
+	<br><br>
+	
 	<form class="form-horizontal">
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Tanggal</label>
+			<label class="col-sm-5 control-label">Tanggal</label>
 			<div class="col-sm-3">
 				<input type="text" type="text" class="form-control" id="inputtanggal2">
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Jumlah</label>
+			<label class="col-sm-5 control-label">Jumlah</label>
 			<div class="col-sm-3">
 				<input type="number" class="form-control" id="inputpengeluaran" placeholder="Masukkan jumlah pengeluaran" min="1">
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label">Keterangan</label>
+			<label class="col-sm-5 control-label">Keterangan</label>
 			<div class="col-sm-3">
-				<input type="text" class="form-control" id="deskripsipengeluaran" placeholder="Deskripsi pengeluaran" min="1">
+				<input type="text" class="form-control" id="deskripsipengeluaran" placeholder="Deskripsi penjualan" min="1">
 			</div>
 		</div>
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-offset-5 col-sm-7">
 				<button type="submit" class="btn btn-default">Masukkan</button>
 			</div>
 		</div>
