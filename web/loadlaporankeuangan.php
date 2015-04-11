@@ -109,7 +109,7 @@ asort($list);
 		<h1 class ="text-center">Laporan Keuangan</h1>
 		<br><br>
 		
-		<form class="form-horizontal" method="post" action="pengeluaran_baru.php">
+		<form class="form-horizontal" method="post" action="">
 			<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
@@ -148,7 +148,7 @@ asort($list);
 				echo '<td>'.$value[0].'</td>';
 				echo '<td>'.$value[1].'</td>';
 				echo '<td>'.$value[2].'</td>';
-				echo '<td><button type="button" class="btn btn-link">Lihat detail</button></td>';
+				echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'");\'>Lihat detail</button></td>';
 				echo '</tr>';
 				$i++;
 			}

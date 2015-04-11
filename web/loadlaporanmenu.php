@@ -2,26 +2,30 @@
 
 include 'sql_connect.php';
 
-// $resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'ditolak' ORDER BY tanggal_dibuat DESC");
-
-// if(mysqli_num_rows($resultPengaduan) != 0) {
-	// while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
-		// echo'	
-			// <div class="contentBox" id="'.$rowPengaduan['status'].'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
-				// <font color="#FFFFFF">
-				// <h1>'.$rowPengaduan['judul'].'</h1>
-				// <hr color="white" />
-				// <p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-			// </a>
-				// </font>
-			// </div>
-		// ';
-	// }
-// }
-// else {
 	echo'
 	<h1 class ="text-center">Laporan per Menu</h1>
 	<br><br>
+	
+	<form class="form-horizontal" method="post" action="">
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Pilih range tanggal</label>
+					<div class="input-daterange form-group">
+						<div class="col-sm-2">
+							<input type="text" type="text" class="form-control" id="inputtanggal3" name="">
+						</div>
+						<div class="col-sm-1">
+							hingga tanggal
+						</div>
+						<div class="col-sm-2">
+							<input type="text" type="text" class="form-control" id="inputtanggal4" name="">
+						</div>
+						<div class="col-sm-1">
+							<button type="submit" class="btn btn-default">Oke</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
 	
 		<table class="table table-striped table-hover">
 			<tr>
