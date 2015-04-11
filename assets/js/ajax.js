@@ -12,10 +12,6 @@ $(document).ready(function() {
 			$( "#inputketeranganpengeluaran" ).val( "N/A" );
 		});
 		
-		
-
-  		console.log($( this ));
-
   		return false;
 	});
 
@@ -31,10 +27,6 @@ $(document).ready(function() {
 			$( "#inputjumlahpenjualan" ).val( "" );
 			$( "#inputketeranganpenjualan" ).val( "N/A" );
 		});
-		
-		
-
-  		console.log($( this ));
 
   		return false;
 	});
