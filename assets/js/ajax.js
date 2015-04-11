@@ -4,12 +4,32 @@ $(document).ready(function() {
 		$.post( "pengeluaran_baru.php", $( "#form-pengeluaran-baru" ).serialize()).done( function()
 		{
 			$( "#sukses-tambah-data-pengeluaran" ).hide();
-			$( "#sukses-tambah-data-pengeluaran" ).empty().append( "<div class='alert alert-success alert-dismissible' role='alert' style='margin-bottom:2em;'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Sukses</strong> Data pengeluaran berhasil ditambah'</div> </div><br />" );
+			$( "#sukses-tambah-data-pengeluaran" ).empty().append( "<div class='alert alert-success alert-dismissible' role='alert' style='margin-bottom:2em;'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Sukses</strong> Data pengeluaran berhasil ditambahkan</div> </div><br />" );
 			$( "#sukses-tambah-data-pengeluaran" ).fadeIn( 100 );
 			$( "#sukses-tambah-data-pengeluaran" ).delay( 5000 ).fadeOut( 800 );
 			$( "#inputtanggal2" ).val( "" );
 			$( "#inputjumlahpengeluaran" ).val( "" );
 			$( "#inputketeranganpengeluaran" ).val( "N/A" );
+		});
+		
+		
+
+  		console.log($( this ));
+
+  		return false;
+	});
+
+	$( "#content" ).on( "click", "#data-penjualan-submit", function() {
+		
+		$.post( "penjualan_baru.php", $( "#form-pengeluaran-baru" ).serialize()).done( function()
+		{
+			$( "#sukses-tambah-data-penjualan" ).hide();
+			$( "#sukses-tambah-data-penjualan" ).empty().append( "<div class='alert alert-success alert-dismissible' role='alert' style='margin-bottom:2em;'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Sukses</strong> Data penjualan berhasil ditambahkan</div> </div><br />" );
+			$( "#sukses-tambah-data-penjualan" ).fadeIn( 100 );
+			$( "#sukses-tambah-data-penjualan" ).delay( 5000 ).fadeOut( 800 );
+			$( "#inputtanggal" ).val( "" );
+			$( "#inputjumlahpenjualan" ).val( "" );
+			$( "#inputketeranganpenjualan" ).val( "N/A" );
 		});
 		
 		
