@@ -1,1 +1,1 @@
-$(function(){$("#inputtanggal2").datepicker({format: 'dd-mm-yyyy',});});
+$(function(){$("#inputtanggal2").datepicker({format: 'dd-mm-yyyy', todayHighlight: true});});

@@ -2,24 +2,6 @@
 
 include 'sql_connect.php';
 
-// $resultPengaduan = mysqli_query($con,"SELECT * FROM pengaduan NATURAL JOIN taman WHERE status = 'ditolak' ORDER BY tanggal_dibuat DESC");
-
-// if(mysqli_num_rows($resultPengaduan) != 0) {
-	// while($rowPengaduan = mysqli_fetch_array($resultPengaduan)){
-		// echo'	
-			// <div class="contentBox" id="'.$rowPengaduan['status'].'"><a href="laporan_aduan.php?id='.$rowPengaduan['id_pengaduan'].'">
-				// <font color="#FFFFFF">
-				// <h1>'.$rowPengaduan['judul'].'</h1>
-				// <hr color="white" />
-				// <p>Lokasi : '.$rowPengaduan['nama'].'<br/>Status : '.$rowPengaduan['status'].'<br/>Tanggal Dibuat : '.PrintTanggal($rowPengaduan['tanggal_dibuat']).'</p>
-			// </a>
-				// </font>
-			// </div>
-		// ';
-	// }
-// }
-// else {
-
 $query = "SELECT * FROM pengeluaran ORDER BY tanggal";
 
 $result = $con->query($query);
@@ -122,11 +104,32 @@ foreach($listTemp as $temp){
 	array_push($list,$temp);
 }
 
-
 asort($list);
 ?>
 		<h1 class ="text-center">Laporan Keuangan</h1>
 		<br><br>
+		
+		<form class="form-horizontal" method="post" action="pengeluaran_baru.php">
+			<div class="form-group">
+				<label class="col-sm-1 control-label">Pilih range tanggal</label>
+					<div class="input-daterange form-group">
+						<div class="col-sm-2">
+							<input type="text" type="text" class="form-control" id="inputtanggal3" name="">
+						</div>
+						<div class="col-sm-1">
+							hingga tanggal
+						</div>
+						<div class="col-sm-2">
+							<input type="text" type="text" class="form-control" id="inputtanggal4" name="">
+						</div>
+						<div class="col-sm-1">
+							<button type="submit" class="btn btn-default">Oke</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		
 		<table class="table table-striped table-hover">
 			<tr>
 				<strong>
@@ -145,7 +148,7 @@ asort($list);
 				echo '<td>'.$value[0].'</td>';
 				echo '<td>'.$value[1].'</td>';
 				echo '<td>'.$value[2].'</td>';
-				echo '<td>'.$value[3].'</td>';
+				echo '<td><button type="button" class="btn btn-link">Lihat detail</button></td>';
 				echo '</tr>';
 				$i++;
 			}
