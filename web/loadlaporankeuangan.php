@@ -20,28 +20,109 @@ include 'sql_connect.php';
 // }
 // else {
 
-$query = "SELECT * FROM pengeluaran";
+$query = "SELECT * FROM pengeluaran ORDER BY tanggal";
 
 $result = $con->query($query);
 
 $n = mysqli_num_rows($result);
 
 $list = array();
+
 while($arr = $result->fetch_assoc()){
-	
 	$temp = array($arr['tanggal'],"",$arr['jumlah'],$arr['keterangan']);
 	array_push($list,$temp);
 }
 
-$query = "SELECT * FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu";
+$listTemp = array();
+
+
+$tanggal = "";
+$harga = 0;
+
+for($i = 0 ;$i<count($list);$i++){
+	if($tanggal==$list[$i][0]){
+		$harga+=$list[$i][2];
+		if($i!=count($list)-1){
+			if($tanggal!=$list[$i+1][0]){
+				$temp = array($tanggal,"",$harga,"");
+				array_push($listTemp,$temp);
+			}
+		}
+		else{
+			$temp = array($tanggal,"",$harga,"");
+			array_push($listTemp,$temp);
+		}
+	}
+	else{
+		$tanggal = $list[$i][0];
+		$harga = $list[$i][2];
+		if($i!=count($list)-1){
+			if($tanggal!=$list[$i+1][0]){
+				$temp = array($tanggal,"",$harga,"");
+				array_push($listTemp,$temp);
+			}
+		}
+		else{
+			$temp = array($tanggal,"",$harga,"");
+			array_push($listTemp,$temp);
+		}
+	}
+}
+
+$list = $listTemp;
+
+$query = "SELECT * FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu ORDER BY tanggal";
 
 $result = $con->query($query);
+
+$listPenj = array();
+
+$listTemp = array();
 
 while($arr = $result->fetch_assoc()){
 	$harga = $arr['jumlah']*$arr['harga'];
 	$temp = array($arr['tanggal'],$harga,"",$arr['keterangan']);
+	array_push($listPenj,$temp);
+}
+
+
+$tanggal = "";
+$harga = 0;
+for($i = 0 ;$i<count($listPenj);$i++){
+	if($tanggal==$listPenj[$i][0]){
+		$harga+=$listPenj[$i][1];
+		if($i!=count($listPenj)-1){
+			if($tanggal!=$listPenj[$i+1][0]){
+				$temp = array($tanggal,$harga,"","");
+				array_push($listTemp,$temp);
+			}
+		}
+		else{
+			$temp = array($tanggal,$harga,"","");
+			array_push($listTemp,$temp);
+		}
+	}
+	else{
+		$tanggal = $listPenj[$i][0];
+		$harga = $listPenj[$i][1];
+		if($i!=count($listPenj)-1){
+			if($tanggal!=$listPenj[$i+1][0]){
+				$temp = array($tanggal,$harga,"","");
+				array_push($listTemp,$temp);
+			}
+		}
+		else{
+			$temp = array($tanggal,$harga,"","");
+			array_push($listTemp,$temp);
+		}
+	}
+}
+
+foreach($listTemp as $temp){
 	array_push($list,$temp);
 }
+
+
 asort($list);
 ?>
 		<h1 class ="text-center">Laporan Keuangan</h1>
@@ -71,5 +152,6 @@ asort($list);
 			?>
 		</table>
 <?php
+	mysqli_close($con);
 // }
 ?>
