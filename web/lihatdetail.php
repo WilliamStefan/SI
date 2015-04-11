@@ -3,10 +3,11 @@
 $tanggal= $_GET['tanggal'];
 
 include 'sql_connect.php';
+include 'print_tanggal.php';
 
 	echo'
 	<h1 class ="text-center">Detail Penjualan</h1>
-	<h3 class ="text-center">'.$tanggal.'</h2>
+	<h3 class ="text-center">'.PrintTanggal($tanggal).'</h2>
 	<br><br>
 	
 		<table class="table table-striped table-hover">

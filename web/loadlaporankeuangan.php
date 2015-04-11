@@ -1,6 +1,7 @@
 <?php
 
 include 'sql_connect.php';
+include 'print_tanggal.php';
 
 $query = "SELECT * FROM pengeluaran ORDER BY tanggal";
 
@@ -145,7 +146,7 @@ asort($list);
 			foreach ($list as $value) {
 				echo '<tr class="warning">';
 				echo '<td>'.$i.'</td>';
-				echo '<td>'.$value[0].'</td>';
+				echo '<td>'.PrintTanggal($value[0]).'</td>';
 				echo '<td>'.$value[1].'</td>';
 				echo '<td>'.$value[2].'</td>';
 				echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'");\'>Lihat detail</button></td>';
