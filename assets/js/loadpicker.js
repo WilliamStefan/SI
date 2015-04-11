@@ -1,1 +1,1 @@
-$(function(){$("#inputtanggal").datepicker({});});
+$(function(){$("#inputtanggal").datepicker({format: 'dd-mm-yyyy',});});
