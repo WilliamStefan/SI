@@ -19,6 +19,30 @@ include 'sql_connect.php';
 	// }
 // }
 // else {
+
+$query = "SELECT * FROM pengeluaran";
+
+$result = $con->query($query);
+
+$n = mysqli_num_rows($result);
+
+$list = array();
+while($arr = $result->fetch_assoc()){
+	
+	$temp = array($arr['tanggal'],"",$arr['jumlah'],$arr['keterangan']);
+	array_push($list,$temp);
+}
+
+$query = "SELECT * FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu";
+
+$result = $con->query($query);
+
+while($arr = $result->fetch_assoc()){
+	$harga = $arr['jumlah']*$arr['harga'];
+	$temp = array($arr['tanggal'],$harga,"",$arr['keterangan']);
+	array_push($list,$temp);
+}
+asort($list);
 ?>
 		<h1 class ="text-center">Laporan Keuangan</h1>
 		<br><br>
@@ -32,13 +56,19 @@ include 'sql_connect.php';
 					<th>Keterangan</th>
 				</strong>
 			</tr>
-			<tr class="warning">
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-			</tr>
+			<?php
+			$i=1;
+			foreach ($list as $value) {
+				echo '<tr class="warning">';
+				echo '<td>'.$i.'</td>';
+				echo '<td>'.$value[0].'</td>';
+				echo '<td>'.$value[1].'</td>';
+				echo '<td>'.$value[2].'</td>';
+				echo '<td>'.$value[3].'</td>';
+				echo '</tr>';
+				$i++;
+			}
+			?>
 		</table>
 <?php
 // }
