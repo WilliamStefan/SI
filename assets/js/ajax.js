@@ -178,7 +178,7 @@ function masukkanpengeluaran() {
 	}
 }
 
-function lihatdetail(tanggal) {
+function lihatdetail(tanggal,pen) {
 	// Create an XMLHttpRequest Object	
 	var xmlHttpObj;	
 	if (window.XMLHttpRequest) {				
@@ -195,7 +195,7 @@ function lihatdetail(tanggal) {
 		}
 	}		
 	// Create a function that will receive data sent from the server
-	xmlHttpObj.open("GET", "lihatdetail.php?tanggal="+tanggal, true);
+	xmlHttpObj.open("GET", "lihatdetail.php?tanggal="+tanggal+"&pendapatan="+pen, true);
 	xmlHttpObj.send();
 	xmlHttpObj.onreadystatechange = function() {
 		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {

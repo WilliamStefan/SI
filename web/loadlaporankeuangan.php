@@ -149,7 +149,12 @@ asort($list);
 				echo '<td>'.PrintTanggal($value[0]).'</td>';
 				echo '<td>'.$value[1].'</td>';
 				echo '<td>'.$value[2].'</td>';
-				echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'");\'>Lihat detail</button></td>';
+				if($value[1]==""){
+					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",0);\'>Lihat detail</button></td>';
+				}
+				else{
+					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",1);\'>Lihat detail</button></td>';
+				}
 				echo '</tr>';
 				$i++;
 			}
