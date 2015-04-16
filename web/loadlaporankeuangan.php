@@ -157,7 +157,7 @@ asort($list);
 				echo '<td>'.$value[1].'</td>';
 				echo '<td>'.$value[2].'</td>';
 				if($value[1]==""){
-					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",0);\'>Lihat detail</button></td>';
+					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",0);\'>Lihat detail</button>  <button type=\'button\' class=\'btn btn-link\' onclick=\'return hapusPengeluaran("'.$value[0].'")\'>Hapus</button></td></td>';
 				}
 				else{
 					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",1);\'>Lihat detail</button>  <button type=\'button\' class=\'btn btn-link\' onclick=\'return hapusPendapatan("'.$value[0].'")\'>Hapus</button></td>';
