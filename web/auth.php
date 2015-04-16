@@ -19,11 +19,13 @@ function prosesLogin($username, $password, mysqli $con)
     if (!$stmt->bind_param('ss', $username, $hashed_password))
     {
         echo " ".$stmt->error;
+        die();
     }
 
     if (!$stmt->execute())
     {
         echo " Error: ".$stmt->error;
+        die();
     }
     $stmt->store_result();
 
