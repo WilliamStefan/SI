@@ -55,6 +55,15 @@ function loadlaporanmenu() {
 	xmlHttpObj.onreadystatechange = function() {
 		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
 			document.getElementById("content").innerHTML=xmlHttpObj.responseText;
+			var s = document.createElement("script");
+			s.type = "text/javascript"; 
+			s.src = "../assets/js/loadpicker5.js";
+			$("head").append(s);
+			
+			var t = document.createElement("script");
+			t.type = "text/javascript"; 
+			t.src = "../assets/js/loadpicker6.js";
+			$("head").append(t);
 		}
 	}
 }
