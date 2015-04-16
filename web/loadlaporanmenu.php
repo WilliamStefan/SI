@@ -9,7 +9,12 @@ $result = $con->query($query);
 ?>
 	<h1 class ="text-center">Laporan per Menu</h1>
 	<br><br>
-	
+			<?php
+				if(mysqli_num_rows($result)==0){
+					echo '<h1 class ="text-center">Database Kosong</h1>';
+				}
+				else{
+			?>
 			<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
@@ -51,6 +56,7 @@ $result = $con->query($query);
 					echo '</tr>';
 					$i++;
 				}
+			}
 			?>
 		</table>
 	;

@@ -111,7 +111,15 @@ asort($list);
 		<br><br>
 		
 		
-			<div class="form-group">
+			
+		<?php
+			if(count($list)==0){
+				echo '<h1 class ="text-center">Database Kosong</h1>';
+			}
+			else{
+		?>
+
+		<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
 						<div class="col-sm-2">
@@ -129,7 +137,7 @@ asort($list);
 					</div>
 				</div>
 			</div>
-		
+			
 		<table class="table table-striped table-hover">
 			<tr>
 				<strong>
@@ -140,7 +148,7 @@ asort($list);
 					<th>Keterangan</th>
 				</strong>
 			</tr>
-			<?php
+		<?php
 			$i=1;
 			foreach ($list as $value) {
 				echo '<tr class="warning">';
@@ -157,7 +165,8 @@ asort($list);
 				echo '</tr>';
 				$i++;
 			}
-			?>
+		}
+		?>
 		</table>
 <?php
 	mysqli_close($con);

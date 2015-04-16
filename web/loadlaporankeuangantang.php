@@ -120,6 +120,13 @@ asort($list);
 		<h1 class ="text-center">Laporan Keuangan</h1>
 		<br><br>
 		
+		
+		<?php
+			if(count($list)==0){
+				echo '<h1 class ="text-center">Database Kosong</h1>';
+			}
+			else{
+		?>
 		<form class="form-horizontal" method="post" action="">
 			<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
@@ -167,6 +174,7 @@ asort($list);
 				}
 				echo '</tr>';
 				$i++;
+			}
 			}
 			?>
 		</table>
