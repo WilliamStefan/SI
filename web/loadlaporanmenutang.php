@@ -1,8 +1,15 @@
 <?php
 
 include 'sql_connect.php';
+$tang1 = $_GET['tanggal1'];
+$datetime = date_create_from_format("d-m-Y", $tang1);
+$tanggal1 = $datetime->format('Y-m-d');
 
-$query = "SELECT *,SUM(jumlah) AS jum FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu GROUP BY menu.id_menu";
+$tang2 = $_GET['tanggal2'];
+$datetime = date_create_from_format("d-m-Y", $tang2);
+$tanggal2 = $datetime->format('Y-m-d');
+
+$query = "SELECT *,SUM(jumlah) AS jum FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu AND tanggal>=\"".$tanggal1."\" AND tanggal<=\"".$tanggal2."\" GROUP BY menu.id_menu";
 
 $result = $con->query($query);
 

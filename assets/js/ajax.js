@@ -231,3 +231,31 @@ function laptang() {
 		}
 	}
 }
+
+function lapmenutang() {
+	// Create an XMLHttpRequest Object	
+	var xmlHttpObj;	
+	if (window.XMLHttpRequest) {				
+		xmlHttpObj = new XMLHttpRequest( );
+	} else {			
+		try {
+			xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e) {
+				xmlHttpObj = false;
+			}
+		}
+	}		
+	// Create a function that will receive data sent from the server
+	var tang1 = document.getElementById("inputtanggal3").value;
+	var tang2 = document.getElementById("inputtanggal4").value;
+	xmlHttpObj.open("GET", "loadlaporanmenutang.php?tanggal1="+tang1+"&tanggal2="+tang2, true);
+	xmlHttpObj.send();
+	xmlHttpObj.onreadystatechange = function() {
+		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+			document.getElementById("content").innerHTML=xmlHttpObj.responseText;
+		}
+	}
+}
