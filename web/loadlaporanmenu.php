@@ -2,7 +2,11 @@
 
 include 'sql_connect.php';
 
-	echo'
+$query = "SELECT *,SUM(jumlah) AS jum FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu GROUP BY menu.id_menu";
+
+$result = $con->query($query);
+
+?>
 	<h1 class ="text-center">Laporan per Menu</h1>
 	<br><br>
 	
@@ -37,14 +41,21 @@ include 'sql_connect.php';
 					<th>Total</th>
 				</strong>
 			</tr>
-			<tr class="warning">
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-				<td>Lorem ipsum</td>
-			</tr>	
+			<?php
+				$i=1;
+				while($arr = $result->fetch_assoc()){
+					echo '<tr class="warning">';
+					echo '<td>'.$i.'</td>';
+					echo '<td>'.$arr['nama'].'</td>';
+					echo '<td>'.$arr['jum'].'</td>';
+					echo '<td>'.$arr['harga'].'</td>';
+					echo '<td>'.$arr['jum']*$arr['harga'].'</td>';
+					echo '</tr>';
+					$i++;
+				}
+			?>
 		</table>
-	';
+	;
+<?php
 // }
 ?>
