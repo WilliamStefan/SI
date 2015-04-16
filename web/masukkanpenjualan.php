@@ -6,7 +6,7 @@ include 'sql_connect.php';
 	<h1 class ="text-center">Masukkan Data Penjualan</h1>
 	<br><br>
 	<div id="sukses-tambah-data-penjualan" class="container"></div>
-	<form class="form-horizontal" method="post" action="penjualan_baru.php">
+	<form class="form-horizontal" method="post" action="penjualan_baru.php" id="form-penjualan-baru">
 		<div class="form-group">
 			<label class="col-sm-5 control-label">Tanggal</label>
 			<div class="col-sm-3">

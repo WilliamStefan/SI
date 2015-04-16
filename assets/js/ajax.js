@@ -16,8 +16,8 @@ $(document).ready(function() {
 	});
 
 	$( "#content" ).on( "click", "#data-penjualan-submit", function() {
-		
-		$.post( "penjualan_baru.php", $( "#form-pengeluaran-baru" ).serialize()).done( function()
+
+        $.post( "penjualan_baru.php", $( "#form-penjualan-baru" ).serialize()).done( function()
 		{
 			$( "#sukses-tambah-data-penjualan" ).hide();
 			$( "#sukses-tambah-data-penjualan" ).empty().append( "<div class='alert alert-success alert-dismissible' role='alert' style='margin-bottom:2em;'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Sukses</strong> Data penjualan berhasil ditambahkan</div> </div><br />" );
@@ -290,4 +290,32 @@ function lapmenutang(n) {
 			$("head").append(t);
 		}
 	}
+}
+
+function hapusPendapatan(tanggal)
+{
+    // Create an XMLHttpRequest Object
+    var xmlHttpObj;
+    if (window.XMLHttpRequest) {
+        xmlHttpObj = new XMLHttpRequest( );
+    } else {
+        try {
+            xmlHttpObj = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                xmlHttpObj = false;
+            }
+        }
+    }
+    // Create a function that will receive data sent from the server
+    xmlHttpObj.open("GET", "hapus_penjualan.php?tgl="+tanggal, true);
+    xmlHttpObj.send();
+    xmlHttpObj.onreadystatechange = function() {
+        if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+            loadlaporankeuangan();
+        }
+    }
+
 }

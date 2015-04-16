@@ -160,7 +160,7 @@ asort($list);
 					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",0);\'>Lihat detail</button></td>';
 				}
 				else{
-					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",1);\'>Lihat detail</button></td>';
+					echo '<td><button type=\'button\' class=\'btn btn-link\' onclick=\'return lihatdetail("'.$value[0].'",1);\'>Lihat detail</button>  <button type=\'button\' class=\'btn btn-link\' onclick=\'return hapusPendapatan("'.$value[0].'")\'>Hapus</button></td>';
 				}
 				echo '</tr>';
 				$i++;

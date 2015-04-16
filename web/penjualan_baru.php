@@ -12,8 +12,11 @@ $sql="INSERT INTO penjualan (id_kasir, tanggal, id_menu, jumlah, keterangan)
 VALUES ('1', '". $datetime->format('Y-m-d') ."', '$menu', '$jumlah', '$keterangan')";
 
 if (!mysqli_query($con,$sql)) {
+    echo "Error";
 	die('Error: ' . mysqli_error($con));
 }
+
+echo "Success";
 mysqli_close($con);
 
 ?>
