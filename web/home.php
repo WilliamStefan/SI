@@ -1,3 +1,14 @@
+<?php
+require 'sql_connect.php';
+require 'auth.php';
+
+if(!cekCookie($con))
+{
+    header("location: login.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en"></html>
 
@@ -34,7 +45,7 @@
 			<button type="button" class="btn btn-default" onclick="return masukkanmenu();">+ Menu</button>
 			<button type="button" class="btn btn-default" onclick="return masukkanpenjualan();">+ Data penjualan</button>
 			<button type="button" class="btn btn-default" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
-			<button type="button" class="btn btn-danger">Logout</button>
+			<a class="btn btn-danger" href="logout.php">Logout</a>
 		</div>
 	</div>
 	<div id="content">

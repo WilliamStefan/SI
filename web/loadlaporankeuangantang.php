@@ -3,7 +3,16 @@
 include 'sql_connect.php';
 include 'print_tanggal.php';
 
-$query = "SELECT * FROM pengeluaran ORDER BY tanggal";
+$tang1 = $_GET['tanggal1'];
+$datetime = date_create_from_format("d-m-Y", $tang1);
+$tanggal1 = $datetime->format('Y-m-d');
+
+$tang2 = $_GET['tanggal2'];
+$datetime = date_create_from_format("d-m-Y", $tang2);
+$tanggal2 = $datetime->format('Y-m-d');
+
+
+$query = "SELECT * FROM pengeluaran WHERE tanggal>=\"".$tanggal1."\" AND tanggal<=\"".$tanggal2."\" ORDER BY tanggal";
 
 $result = $con->query($query);
 
@@ -54,7 +63,8 @@ for($i = 0 ;$i<count($list);$i++){
 
 $list = $listTemp;
 
-$query = "SELECT * FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu ORDER BY tanggal";
+$query = "SELECT * FROM penjualan,menu WHERE penjualan.id_menu=menu.id_menu AND tanggal>=\"".$tanggal1."\" AND tanggal<=\"".$tanggal2."\" ORDER BY tanggal";
+
 
 $result = $con->query($query);
 
@@ -110,7 +120,7 @@ asort($list);
 		<h1 class ="text-center">Laporan Keuangan</h1>
 		<br><br>
 		
-		
+		<form class="form-horizontal" method="post" action="">
 			<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
@@ -124,11 +134,12 @@ asort($list);
 							<input type="text" type="text" class="form-control" id="inputtanggal4" name="">
 						</div>
 						<div class="col-sm-1">
-							<button type="submit" class="btn btn-default" onclick="return laptang();">Oke</button>
+							<button type="submit" class="btn btn-default">Oke</button>
 						</div>
 					</div>
 				</div>
 			</div>
+		</form>
 		
 		<table class="table table-striped table-hover">
 			<tr>
