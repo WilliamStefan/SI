@@ -1,0 +1,1 @@
+$(function(){$("#inputtanggal7").datepicker({format: 'dd-mm-yyyy', todayHighlight: true, todayBtn: "linked"});});

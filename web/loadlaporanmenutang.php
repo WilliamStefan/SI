@@ -21,13 +21,13 @@ $result = $con->query($query);
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
 						<div class="col-sm-2">
-							<input type="text" type="text" class="form-control" id="inputtanggal3" name="">
+							<input type="text" type="text" class="form-control" id="inputtanggal9" name="">
 						</div>
 						<div class="col-sm-1">
 							hingga tanggal
 						</div>
 						<div class="col-sm-2">
-							<input type="text" type="text" class="form-control" id="inputtanggal4" name="">
+							<input type="text" type="text" class="form-control" id="inputtanggal10" name="">
 						</div>
 						<div class="col-sm-1">
 							<button type="submit" class="btn btn-default">Oke</button>
