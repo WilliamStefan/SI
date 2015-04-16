@@ -7,6 +7,7 @@
     if($login)
     {
         header("location: ". "home.php");
+        die();
     } else {
         if ((isset($_POST['username']) && (isset($_POST['password']))))
         {
@@ -14,6 +15,7 @@
             if($login)
             {
                 header("location: ". "home.php");
+                die();
             } else {
                 $loginFailed = true;
             }
