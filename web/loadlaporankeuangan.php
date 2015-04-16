@@ -114,7 +114,7 @@ asort($list);
 			
 		<?php
 			if(count($list)==0){
-				echo '<h1 class ="text-center">Database Kosong</h1>';
+				echo '<h1 class ="text-center">Tidak ada data</h1>';
 			}
 			else{
 		?>
@@ -132,7 +132,7 @@ asort($list);
 							<input type="text" type="text" class="form-control" id="inputtanggal4" name="">
 						</div>
 						<div class="col-sm-1">
-							<button type="submit" class="btn btn-default" onclick="return laptang();">Oke</button>
+							<button type="submit" class="btn btn-default" onclick="return laptang(3);">Oke</button>
 						</div>
 					</div>
 				</div>

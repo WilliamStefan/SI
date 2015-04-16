@@ -213,7 +213,8 @@ function lihatdetail(tanggal,pen) {
 	}
 }
 
-function laptang() {
+function laptang(n) {
+	
 	// Create an XMLHttpRequest Object	
 	var xmlHttpObj;	
 	if (window.XMLHttpRequest) {				
@@ -230,8 +231,10 @@ function laptang() {
 		}
 	}		
 	// Create a function that will receive data sent from the server
-	var tang1 = document.getElementById("inputtanggal3").value;
-	var tang2 = document.getElementById("inputtanggal4").value;
+	
+	var tang1 = document.getElementById("inputtanggal"+n).value;
+	n++;
+	var tang2 = document.getElementById("inputtanggal"+n).value;
 	xmlHttpObj.open("GET", "loadlaporankeuangantang.php?tanggal1="+tang1+"&tanggal2="+tang2, true);
 	xmlHttpObj.send();
 	xmlHttpObj.onreadystatechange = function() {
@@ -250,7 +253,7 @@ function laptang() {
 	}
 }
 
-function lapmenutang() {
+function lapmenutang(n) {
 	// Create an XMLHttpRequest Object	
 	var xmlHttpObj;	
 	if (window.XMLHttpRequest) {				
@@ -267,8 +270,10 @@ function lapmenutang() {
 		}
 	}		
 	// Create a function that will receive data sent from the server
-	var tang1 = document.getElementById("inputtanggal3").value;
-	var tang2 = document.getElementById("inputtanggal4").value;
+	var tang1 = document.getElementById("inputtanggal"+n).value;
+	n++;
+	var tang2 = document.getElementById("inputtanggal"+n).value;
+	
 	xmlHttpObj.open("GET", "loadlaporanmenutang.php?tanggal1="+tang1+"&tanggal2="+tang2, true);
 	xmlHttpObj.send();
 	xmlHttpObj.onreadystatechange = function() {

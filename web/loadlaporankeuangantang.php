@@ -123,11 +123,10 @@ asort($list);
 		
 		<?php
 			if(count($list)==0){
-				echo '<h1 class ="text-center">Database Kosong</h1>';
+				echo '<h1 class ="text-center">Tidak ada data</h1>';
 			}
 			else{
 		?>
-		<form class="form-horizontal" method="post" action="">
 			<div class="form-group">
 				<label class="col-sm-1 control-label">Pilih range tanggal</label>
 					<div class="input-daterange form-group">
@@ -141,12 +140,11 @@ asort($list);
 							<input type="text" type="text" class="form-control" id="inputtanggal8" name="">
 						</div>
 						<div class="col-sm-1">
-							<button type="submit" class="btn btn-default">Oke</button>
+							<button type="submit" class="btn btn-default" onclick="return laptang(7);">Oke</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</form>
 		
 		<table class="table table-striped table-hover">
 			<tr>
