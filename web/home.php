@@ -40,12 +40,14 @@ if(!cekCookie($con))
 		<div id="menu" class="pull-left">
 			<button type="button" class="btn btn-default" onclick="return loadlaporankeuangan();">Laporan keuangan</button>
 			<button type="button" class="btn btn-default" onclick="return loadlaporanmenu();">Laporan per menu</button>
+			<button type="button" class="btn btn-danger" onclick="return loadreset();">Reset data</button>
 		</div>
 		<div id="menu2" class="pull-right">
-			<button type="button" class="btn btn-default" onclick="return masukkanmenu();">+ Menu</button>
-			<button type="button" class="btn btn-default" onclick="return masukkanpenjualan();">+ Data penjualan</button>
-			<button type="button" class="btn btn-default" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
-			<a class="btn btn-danger" href="logout.php">Logout</a>
+				<button type="button" class="btn btn-default" onclick="return masukkanmenu();">+ Menu</button>
+				<button type="button" class="btn btn-default" onclick="return masukkanpenjualan();">+ Data penjualan</button>
+				<button type="button" class="btn btn-default" onclick="return masukkanpengeluaran();">+ Data pengeluaran</button>
+				<a class="btn btn-danger" href="logout.php">Logout</a>
+			</ul>
 		</div>
 	</div>
 	<div id="content">
