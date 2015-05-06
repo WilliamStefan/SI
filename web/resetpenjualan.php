@@ -5,11 +5,11 @@ include 'sql_connect.php';
 $sql="TRUNCATE TABLE penjualan";
 
 if (!mysqli_query($con,$sql)) {
-    echo "Error";
-	die('Error: ' . mysqli_error($con));
+    echo '<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Error!</strong> Data penjualan gagal dihapus. Pesan kesalahan: ' .mysqli_error($con). '</div>';
+	die();
 }
 else {
-	echo "Success";
+	echo '<div class="alert alert-success alert-dismissible" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><b>Sukses!</b> Data penjualan berhasil dihapus.</div>';
 }
 mysqli_close($con);
 

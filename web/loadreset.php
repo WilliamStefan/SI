@@ -1,5 +1,11 @@
 <h1 class ="text-center">Reset Data</h1>
-<br><br>		
-<a class="btn btn-danger" href="resetpenjualan.php" onclick="return confirm('Apakah Anda yakin ingin menghapus semua data penjualan?')">Reset Penjualan</a>
-<a class="btn btn-danger" href="resetpengeluaran.php" onclick="return confirm('Apakah Anda yakin ingin menghapus semua data pengeluaran?')">Reset Pengeluaran</a>
-<a class="btn btn-danger" href="resetmenu.php" onclick="return confirm('Apakah Anda yakin ingin menghapus semua data menu?')">Reset Menu</a>
+<br>
+<div class="container">
+<div id="sukses-reset"></div>
+</div>
+<br>
+<div class="text-center">
+<a id="reset-penjualan" class="btn btn-danger" href="#">Reset Penjualan</a>
+<a id="reset-pengeluaran" class="btn btn-danger" href="#">Reset Pengeluaran</a>
+<a id="reset-menu" class="btn btn-danger" href="#"">Reset Menu</a>
+</div>

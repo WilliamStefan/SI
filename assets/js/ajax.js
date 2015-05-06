@@ -30,6 +30,54 @@ $(document).ready(function() {
 
   		return false;
 	});
+
+    $( "#content").on("click", "#reset-penjualan", function() {
+
+        if (confirm('Apakah Anda yakin ingin menghapus semua data penjualan?'))
+        {
+            $.get ("resetpenjualan.php").done( function(response)
+            {
+                $( "#sukses-reset").hide();
+                $( "#sukses-reset").empty();
+                $( "#sukses-reset").append(response);
+                $( "#sukses-reset").fadeIn(100);
+            });
+        }
+
+        return false;
+    });
+
+    $( "#content").on("click", "#reset-pengeluaran", function() {
+
+        if (confirm('Apakah Anda yakin ingin menghapus semua data pengeluaran?'))
+        {
+            $.get ("resetpengeluaran.php").done( function(response)
+            {
+                $( "#sukses-reset").hide();
+                $( "#sukses-reset").empty();
+                $( "#sukses-reset").append(response);
+                $( "#sukses-reset").fadeIn(100);
+            });
+        }
+
+        return false;
+    });
+
+    $( "#content").on("click", "#reset-menu", function() {
+
+        if (confirm('Apakah Anda yakin ingin menghapus semua data menu?'))
+        {
+            $.get ("resetmenu.php").done( function(response)
+            {
+                $( "#sukses-reset").hide();
+                $( "#sukses-reset").empty();
+                $( "#sukses-reset").append(response);
+                $( "#sukses-reset").fadeIn(100);
+            });
+        }
+
+        return false;
+    });
 });
 function loadlaporankeuangan() {
 	// Create an XMLHttpRequest Object	
