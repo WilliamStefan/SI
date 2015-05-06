@@ -78,6 +78,19 @@ $(document).ready(function() {
 
         return false;
     });
+
+    $("#content").on("click", "#form-tambah-menu-submit", function() {
+        $.post("menu_baru.php", $("#form-tambah-menu").serialize()).done(function(response) {
+            $( "#status-masukkan-menu" ).hide();
+            $( "#status-masukkan-menu" ).empty().append( response );
+            $( "#status-masukkan-menu" ).fadeIn( 100 );
+            $( "#status-masukkan-menu" ).delay( 5000 ).fadeOut( 800 );
+            $( "#form-tambah-menu-nama" ).val( "" );
+            $( "#form-tambah-menu-harga" ).val( "" );
+        });
+
+        return false;
+    });
 });
 function loadlaporankeuangan() {
 	// Create an XMLHttpRequest Object	
